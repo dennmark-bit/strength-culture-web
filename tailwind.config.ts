@@ -8,7 +8,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: '#C9A84C',
         darkbg: '#0A0A0A',
         darkcard: '#111111',
       },
