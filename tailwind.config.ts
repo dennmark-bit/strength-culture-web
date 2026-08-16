@@ -8,6 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        maroon: '#A0202F',
+        'maroon-light': '#B5293E',
+        'maroon-dark': '#5C0F1C',
         darkbg: '#0A0A0A',
         darkcard: '#111111',
       },

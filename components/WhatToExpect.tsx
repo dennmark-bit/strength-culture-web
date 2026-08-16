@@ -1,4 +1,11 @@
 export default function WhatToExpect() {
+  const maroonGradient = {
+    background: 'linear-gradient(135deg, #5C0F1C, #B5293E, #8B1A2B)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+  };
+
   const items = [
     {
       num: '01',
@@ -19,14 +26,14 @@ export default function WhatToExpect() {
   return (
     <section id="about" className="bg-zinc-950 py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="text-zinc-400 text-xs uppercase tracking-[0.4em] mb-4 text-center">What to Expect</p>
+        <p className="text-xs uppercase tracking-[0.4em] mb-4 text-center" style={maroonGradient}>What to Expect</p>
         <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">
           You're Exactly Where<br />You Need to Be
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {items.map((item) => (
-            <div key={item.num} className="border-t-2 border-white/20 pt-8">
-              <p className="text-white text-4xl font-black mb-4">{item.num}</p>
+            <div key={item.num} className="border-t-2 border-maroon pt-8">
+              <p className="text-4xl font-black mb-4" style={maroonGradient}>{item.num}</p>
               <h3 className="text-xl font-black uppercase mb-3">{item.title}</h3>
               <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
             </div>

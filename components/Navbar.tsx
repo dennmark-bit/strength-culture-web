@@ -8,13 +8,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-darkbg/90 backdrop-blur border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold tracking-widest uppercase text-white">
-          Strength<span className="text-white">Culture</span>
+          Strength<span
+            style={{ background: 'linear-gradient(90deg, #B5293E, #8B1A2B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
+          >Culture</span>
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-wider">
-          <Link href="#classes" className="hover:text-white transition text-zinc-400">Classes</Link>
-          <Link href="#coaches" className="hover:text-white transition text-zinc-400">Coaches</Link>
-          <Link href="#about" className="hover:text-white transition text-zinc-400">About</Link>
-          <Link href="#contact" className="hover:text-white transition text-zinc-400">Contact</Link>
+          <Link href="#classes" className="text-zinc-400 hover:text-white transition">Classes</Link>
+          <Link href="#coaches" className="text-zinc-400 hover:text-white transition">Coaches</Link>
+          <Link href="#about" className="text-zinc-400 hover:text-white transition">About</Link>
+          <Link href="#contact" className="text-zinc-400 hover:text-white transition">Contact</Link>
           <a
             href="https://strengthculturehk.momence.com"
             target="_blank"
@@ -35,10 +37,10 @@ export default function Navbar() {
       </div>
       {open && (
         <div className="md:hidden bg-darkbg border-t border-white/10 px-6 pb-6 flex flex-col gap-4 text-sm uppercase tracking-wider">
-          <Link href="#classes" onClick={() => setOpen(false)} className="hover:text-white transition text-zinc-400">Classes</Link>
-          <Link href="#coaches" onClick={() => setOpen(false)} className="hover:text-white transition text-zinc-400">Coaches</Link>
-          <Link href="#about" onClick={() => setOpen(false)} className="hover:text-white transition text-zinc-400">About</Link>
-          <Link href="#contact" onClick={() => setOpen(false)} className="hover:text-white transition text-zinc-400">Contact</Link>
+          <Link href="#classes" onClick={() => setOpen(false)} className="text-zinc-400 hover:text-white transition">Classes</Link>
+          <Link href="#coaches" onClick={() => setOpen(false)} className="text-zinc-400 hover:text-white transition">Coaches</Link>
+          <Link href="#about" onClick={() => setOpen(false)} className="text-zinc-400 hover:text-white transition">About</Link>
+          <Link href="#contact" onClick={() => setOpen(false)} className="text-zinc-400 hover:text-white transition">Contact</Link>
           <a
             href="https://strengthculturehk.momence.com"
             target="_blank"
