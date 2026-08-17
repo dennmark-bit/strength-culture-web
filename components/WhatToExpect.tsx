@@ -1,44 +1,55 @@
-export default function WhatToExpect() {
-  const maroonGradient = {
-    background: 'linear-gradient(135deg, #5C0F1C, #B5293E, #8B1A2B)',
-    WebkitBackgroundClip: 'text' as const,
-    WebkitTextFillColor: 'transparent' as const,
-    backgroundClip: 'text' as const,
-  };
+const steps = [
+  {
+    num: '01',
+    title: 'Walk In',
+    desc: 'Check in at the front desk or via the kiosk. Our team will walk you through the space and the programme.',
+  },
+  {
+    num: '02',
+    title: 'Get Assessed',
+    desc: 'Your first session includes a movement assessment so we place you in the right class — or match you with a coach.',
+  },
+  {
+    num: '03',
+    title: 'Train Hard',
+    desc: 'Show up, do the work. Every session is coached. You will never be left to figure it out alone.',
+  },
+  {
+    num: '04',
+    title: 'Become the Culture',
+    desc: 'Members here are not just gym-goers. They are part of a community that holds each other to a standard.',
+  },
+];
 
-  const items = [
-    {
-      num: '01',
-      title: 'Beginner Friendly',
-      desc: 'Never touched a barbell? No problem. Every class has modifications and our coaches will guide you through technique from day one.',
-    },
-    {
-      num: '02',
-      title: 'Coach-Led Every Session',
-      desc: 'No guesswork. Our coaches cue every movement, correct your form, and adjust weights and intensity to your level — every single class.',
-    },
-    {
-      num: '03',
-      title: 'A Community That Shows Up',
-      desc: 'Training alone is hard. Training with people who are grinding alongside you is different. Strength Culture is built around people who show up for each other.',
-    },
-  ];
+export default function WhatToExpect() {
   return (
-    <section id="about" className="bg-zinc-950 py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.4em] mb-4 text-center" style={maroonGradient}>What to Expect</p>
-        <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">
-          You're Exactly Where<br />You Need to Be
+    <section className="section-pad bg-[#0A0A0A]">
+      <div className="mb-12">
+        <p className="label text-[#6B1A1A] mb-3">Your First Visit</p>
+        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight">
+          What to Expect
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {items.map((item) => (
-            <div key={item.num} className="border-t-2 border-maroon pt-8">
-              <p className="text-4xl font-black mb-4" style={maroonGradient}>{item.num}</p>
-              <h3 className="text-xl font-black uppercase mb-3">{item.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {steps.map((s) => (
+          <div key={s.num} className="flex flex-col gap-4">
+            <span className="text-6xl font-black text-white/10">{s.num}</span>
+            <h3 className="text-lg font-black uppercase tracking-tight">{s.title}</h3>
+            <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-12">
+        <a
+          href="https://strengthculturehk.com/book"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          Book Your First Visit
+        </a>
       </div>
     </section>
   );

@@ -1,55 +1,62 @@
 export default function Contact() {
-  const maroonGradient = {
-    background: 'linear-gradient(135deg, #5C0F1C, #B5293E, #8B1A2B)',
-    WebkitBackgroundClip: 'text' as const,
-    WebkitTextFillColor: 'transparent' as const,
-    backgroundClip: 'text' as const,
-  };
-
   return (
-    <section id="contact" className="bg-darkbg py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.4em] mb-4 text-center" style={maroonGradient}>Find Us</p>
-        <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">
-          Come Train With Us
-        </h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
+    <section id="contact" className="section-pad bg-[#0F0F0F] border-t border-white/10">
+      <div className="grid md:grid-cols-2 gap-16">
+        {/* Left */}
+        <div>
+          <p className="label text-[#6B1A1A] mb-3">Visit Us</p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
+            Find Us in
+            <br />
+            <span className="text-white/30">Central HK</span>
+          </h2>
+
+          <div className="flex flex-col gap-5 text-sm text-white/60">
             <div>
-              <p className="text-xs uppercase tracking-wider mb-2" style={maroonGradient}>Address</p>
-              <p className="text-white font-bold">G/F 27-29 Li Yuen Street West</p>
-              <p className="text-zinc-400">Central, Hong Kong</p>
+              <p className="label text-white/30 text-[10px] mb-1">Address</p>
+              <p>G/F 27-29 Li Yuen Street West</p>
+              <p>Central, Hong Kong Island</p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-wider mb-2" style={maroonGradient}>Phone</p>
-              <a href="tel:+85255483571" className="text-white font-bold hover:text-zinc-300 transition">+852 5548 3571</a>
+              <p className="label text-white/30 text-[10px] mb-1">Hours</p>
+              <p>Mon – Fri: 6:30am – 9:30pm</p>
+              <p>Sat – Sun: 8:00am – 6:00pm</p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-wider mb-2" style={maroonGradient}>Email</p>
-              <a href="mailto:inquiry@strengthculturehk.com" className="text-white font-bold hover:text-zinc-300 transition">inquiry@strengthculturehk.com</a>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wider mb-2" style={maroonGradient}>Hours</p>
-              <p className="text-zinc-400">Monday – Friday: <span className="text-white font-bold">6:00am – 10:00pm</span></p>
-              <p className="text-zinc-400">Saturday, Sunday & Public Holidays: <span className="text-white font-bold">8:00am – 5:00pm</span></p>
+              <p className="label text-white/30 text-[10px] mb-1">Get in Touch</p>
+              <a
+                href="https://wa.me/85200000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#6B1A1A] transition-colors"
+              >
+                WhatsApp Us
+              </a>
             </div>
           </div>
-          <div className="flex flex-col gap-4 justify-center">
+
+          <div className="mt-10">
             <a
-              href="https://strengthculturehk.momence.com"
+              href="https://strengthculturehk.com/book"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-black px-8 py-5 font-black uppercase tracking-widest text-sm hover:bg-zinc-200 transition text-center"
+              className="btn-primary"
             >
-              Book a Free Trial Class
-            </a>
-            <a
-              href="mailto:inquiry@strengthculturehk.com"
-              className="border border-white/30 text-white px-8 py-5 font-bold uppercase tracking-widest text-sm hover:border-maroon hover:text-white transition text-center"
-            >
-              Send Us an Email
+              Book a Free Trial
             </a>
           </div>
+        </div>
+
+        {/* Right — Map embed placeholder */}
+        <div
+          className="w-full min-h-[320px] bg-[#141414] flex items-center justify-center"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(45deg, #1a1a1a 0, #1a1a1a 1px, transparent 0, transparent 50%)',
+            backgroundSize: '8px 8px',
+          }}
+        >
+          <span className="label text-white/20">Map Embed — Add Google Maps iframe</span>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,17 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        maroon: '#A0202F',
-        'maroon-light': '#B5293E',
-        'maroon-dark': '#5C0F1C',
-        darkbg: '#0A0A0A',
-        darkcard: '#111111',
+        bg: '#0A0A0A',
+        card: '#141414',
+        border: '#222222',
+        maroon: '#6B1A1A',
+        'maroon-light': '#8B2222',
+        lime: '#E8FF00',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
